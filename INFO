@@ -1,0 +1,92 @@
+# 🤖 Local AI Assistant — Offline / Hybrid / Online
+
+A personal AI assistant for Windows that runs **entirely locally** (no data ever leaves your PC), with the option to enable internet or cloud access only if and when you decide to.
+
+---
+
+## 📌 Project Status
+
+All core roadmap phases, including full offline voice interaction, are completed.
+
+| Phase | Description | Status |
+| :--- | :--- | :---: |
+| **1** | Ollama setup + GPU model deployment | ✅ |
+| **2** | Local backend + offline chat + UI | ✅ |
+| **3** | RAG for personal documents folder | ✅ |
+| **🔊** | **Voice: recognition (Whisper) + synthesis (SAPI) offline** | ✅ |
+| **4** | Local persistent memory | ✅ |
+| **5** | Predefined tools and functions | ✅ |
+| **6** | Online mode (internet access via tools) | ✅ |
+| **7** | Hybrid mode + intelligent routing | ✅ |
+| **8** | UI polishing and model management | ✅ |
+
+> **Note on Modes**: "Online" mode does **not** send your prompts to third-party cloud LLMs—it uses **the exact same local model**, giving it access to web-enabled tools (web search, weather, URL parsing). No external API keys required.
+
+---
+
+## ⚙️ Key Features
+
+### 🧠 RAG (Retrieval-Augmented Generation)
+- **Category-based Indexing:** Organize files in subfolders inside `~/ai-locale/knowledge/`:
+  - `documenti/` → PDF, DOCX, TXT, MD (text extraction)
+  - `fogli-di-calcolo/` → XLSX, CSV (tabular extraction, row-by-row chunks)
+  - `mappe/` → GeoJSON, GPX, KML (coordinates and placenames)
+  - `immagini/` → JPG, PNG (descriptions/OCR via local vision model `bakllava`)
+  - `audio/` → MP3, WAV, M4A (offline transcription via Whisper)
+- **Hybrid Retrieval:** Combines semantic search (embeddings) with keyword matching to reliably pull structured data from tables and CSVs.
+- **Pre-ingestion Security:** Every file is scanned by Windows Defender and checked for potential prompt injection attempts before indexing.
+- **Full Source Citation:** The assistant explicitly cites file sources in its answers. If no relevant information is found in your docs, it explicitly states so rather than hallucinating personal data.
+
+### 💾 Long-Term Memory
+- Automatically extracts durable user facts and preferences at the end of each session.
+- Stores data locally as encrypted embeddings and text (`~/ai-locale/memory/`).
+- Dynamically retrieves relevant memories above a strict similarity threshold and injects them into the context prompt.
+- **User Control:** Inspect, manually add, or delete individual memories directly from ⚙ *Settings*.
+
+### 🌐 Offline Italian Geography (GeoNames)
+- Built-in **GeoNames** dataset to query information on over 63,000 places, 20 regions, and 107 Italian provinces completely offline.
+- Dedicated tools: `find_place` (location details/population) and `distance_places` (as-the-crow-flies distance calculations).
+
+### 🛠️ Agent Mode
+Allows the AI to perform system actions on your PC, categorized by safety risk levels:
+- **Level 1 (Read-only):** Folder browsing, file reading, local calendar queries (executes automatically).
+- **Level 2 (Write/Modify):** File creation/editing, command execution, app launching (**requires explicit user confirmation before execution**).
+- **Level 3 (Critical/Dangerous):** Destructive system actions (permanently blocked).
+- **Safety Rails:** Dry-run simulation mode, internal safe trash directory (`~/ai-locale/.trash`), folder sandboxing, and strict command denylists.
+
+### 🛡️ Security & Privacy
+- **Firewall Isolation:** Optional Windows Firewall rule that blocks all outbound internet connections for the app while preserving the local loopback connection to Ollama.
+- **Encryption at Rest (DPAPI):** Local vector indices and memory stores are encrypted using Windows DPAPI, readable only by your logged-in Windows account.
+- **Prompt Injection Defense:** Strict separation between instruction prompts and un-trusted document/web data.
+
+### 🎙️ Offline Voice Support
+- **STT (Speech-to-Text):** Microphone input transcription using `faster-whisper` (`small` model on CPU/GPU).
+- **TTS (Text-to-Speech):** Spoken output synthesis using native Windows SAPI engines.
+
+---
+
+## 🛠️ Tech Stack & Architecture
+
+- **Backend:** Python 3.12+ / FastAPI (bound strictly to `127.0.0.1`)
+- **Frontend / UI:** Native desktop window via `pywebview` (HTML/CSS/JS)
+- **LLM Engine:** [Ollama](https://ollama.com) (Recommended default: `qwen2.5:7b`)
+- **Vector Store & Embeddings:** ChromaDB / FAISS / `sentence-transformers`
+- **STT / TTS:** `faster-whisper` / Windows SAPI
+
+---
+
+## 💻 System Requirements
+
+- **OS:** Windows 10 / 11
+- **Hardware:** NVIDIA GPU with at least 8 GB VRAM (Tested on RTX 3050 8GB)
+- **Software:** - [Python 3.12+](https://www.python.org/)
+  - [Ollama](https://ollama.com) with at least one pulled model (e.g., `ollama pull qwen2.5`)
+
+---
+
+## 🚀 Quickstart Guide
+
+1. **Clone the repository and enter the directory:**
+   ```powershell
+   git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+   cd your-repo-name
