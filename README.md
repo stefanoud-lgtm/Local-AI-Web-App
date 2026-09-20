@@ -27,6 +27,9 @@ Dedicated admin dashboard to manage user access and settings.
 
 Open Source Code: The entire system is customizable so you can adapt it to your needs.
 
+<img width="782" height="849" alt="image" src="https://github.com/user-attachments/assets/15befd62-b225-4e63-9af6-6781656344aa" />
+
+
 Project Status
 Note: Source code files will be pushed to this repository as soon as the current debugging and testing phase is complete.
 
