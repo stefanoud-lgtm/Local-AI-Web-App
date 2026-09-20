@@ -1,0 +1,80 @@
+mode: offline
+model: qwen2.5:7b
+code_model: qwen2.5-coder:7b
+reasoning_model: qwen3.5:latest
+output_model: qwen2.5:7b
+routing_mode: light
+user_allowed_models:
+- qwen2.5:7b
+- qwen2.5-coder:7b
+- deepseek-r1:8b
+- gemma3:4b
+user_storage_quota_gb: 8
+usage_max_requests: 150
+usage_window_hours: 3
+weekly_work_limit_hours: 10
+encrypt_users_db: true
+reasoning_max_tokens: 512
+reasoning_num_ctx: 4096
+reasoning_keep_alive: 5m
+ollama_host: http://127.0.0.1:11434
+temperature: 0.3
+creative_temperature: 0.7
+num_ctx: 2048
+keep_alive: 30m
+model_options:
+  deepseek-r1:8b:
+    num_ctx: 4096
+    top_k: 20
+    top_p: 0.9
+    repeat_penalty: 1.1
+chat_history_max_messages: 24
+chat_history_max_chars: 9000
+embed_keep_alive: 10m
+vision_keep_alive: 30s
+auto_unload_on_switch: true
+tools_enabled: true
+max_tool_rounds: 4
+data_dir: ./ai-locale-data
+ollama_models_dir: ./ollama-models
+knowledge_subdir: knowledge
+embedding_model: nomic-embed-text
+vision_model: bakllava:latest
+rag_score_threshold: 0.65
+rag_top_k: 5
+memory_enabled: true
+memory_score_threshold: 0.6
+memory_top_k: 5
+memory_dedup_threshold: 0.9
+memory_core_max: 8
+memory_recall_dedup: 0.85
+memory_context_max_chars: 1200
+accurate_mode: false
+allowed_dirs:
+- ./ai-locale-data
+antivirus_scan: true
+injection_scan: true
+encrypt_at_rest: true
+allow_silent_updates: false
+agent_enabled: true
+agent_dry_run: false
+agent_autonomy: auto
+payload_encryption_enabled: true
+stt_model: small
+stt_device: cpu
+voice_language: it
+tts_enabled: false
+tts_rate: 175
+tts_engine: piper
+piper_voice: it_IT-paola-medium
+voices_subdir: voices
+piper_length_scale: 1.0
+piper_noise_scale: 0.667
+piper_noise_w: 0.8
+piper_volume: 1.0
+cloud:
+  provider: anthropic
+  model: ''
+mixed_rules:
+  web_search_cloud: true
+  big_model_on_request: true
