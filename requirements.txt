@@ -1,0 +1,31 @@
+# --- Fase 1-2: chat offline + UI + monitoraggio ---
+fastapi
+uvicorn[standard]
+httpx
+pywebview
+nvidia-ml-py        # monitoraggio GPU NVIDIA (pynvml)
+psutil              # monitoraggio CPU
+pyyaml              # configurazione locale
+
+# --- Voce (tutto offline) ---
+faster-whisper      # STT offline
+pyttsx3             # TTS fallback SAPI (Windows)
+piper-tts           # TTS neurale offline (voce italiana, modelli .onnx in data_dir/voices)
+
+# --- RAG / documenti ---
+pypdf               # estrazione testo PDF
+python-docx         # documenti Word (.docx)
+odfpy               # documenti/fogli OpenDocument (.odt, .ods) — LibreOffice
+openpyxl            # fogli di calcolo Excel (.xlsx)
+
+# --- App Launcher (sez. 3) ---
+rapidfuzz           # matching fuzzy nomi applicazioni
+pywin32             # risoluzione .lnk (win32com) e registro (winreg è stdlib)
+
+# --- Accesso remoto / Cloudflare Tunnel (sez. 6) ---
+pycryptodome        # AES-256-GCM per la crittografia applicativa opzionale
+cryptography        # certificati TLS autofirmati per l'HTTPS locale (run.py)
+
+# --- Upload multipart + ricerca online (Modalità Mista) ---
+python-multipart    # parsing FormData in FastAPI (upload immagini fallback)
+duckduckgo_search   # ricerca web anonima senza API key (DDGS) in Modalità Mista
