@@ -1,46 +1,44 @@
-# Local-AI-Web-App
-A web interface for running and managing AI models locally, fully offline and privacy-focused. Built to be flexible, easily modifiable, and ready to connect to an external website via Cloudflare.
+# Local-AI-Desktop-&-Web-App
 
+A hybrid Windows desktop app and web portal designed to run and manage fine-tuned LLMs locally. Built for total privacy, daily productivity, and high performance on consumer-grade hardware.
 
-Features
-Local Execution & Privacy: No external API calls. All data stays on your local machine.
+> **Platform Notice:** Currently developed and tested exclusively for **Windows**. Linux and macOS are not supported at this stage.
 
-Cloudflare Integration: Pre-configured to connect securely to a domain or web app via Cloudflare Tunnels if you need remote access.
+---
 
-Model Management: Quick switching between different models (Ollama, etc.) directly from the interface.
+## What Makes This Project Different
 
-Dedicated Modes:
+* **Optimized for Consumer GPUs:** Tuned specifically to run on budget local hardware (such as the **NVIDIA RTX 3050**) rather than expensive enterprise cloud infrastructure.
+* **Proven Performance:** Benchmarked using a custom-tuned local model achieving **~40 tokens/second** on an RTX 3050. Tested by generating fully playable 2D HTML games in just 2 to 3 prompts.
+* **Dual Interface (Desktop & Web):** Operates as a standalone Windows desktop application and as a web portal linked to a private custom domain.
+* **100% Private & Local:** Powered by a local Ollama backend. Zero external API calls—your data and conversations never leave your machine.
 
-Coding Mode: Interface and parameters optimized for code generation and debugging.
+## Key Features
 
-Agent Mode: Designed for complex tasks and automated workflows.
+* **Daily Assistant & Coding Engine:** Optimized system prompts and parameters specifically tuned for writing, debugging, and executing code.
+* **RAG & Local Knowledge Base:** Built-in vector database to index and query PDFs, documents, and local codebases offline.
+* **Cloudflare Tunnel Routing:** Pre-configured networking setup to securely access the interface remotely via Cloudflare Tunnels without opening router ports.
+* **Authentication & Admin Control:** User login system, encrypted local password storage, and an admin dashboard for access management.
 
-RAG Module: Memory and retrieval system for uploading documents and files for the models to analyze.
+## Architecture & Licensing
 
-Admin Panel & Authentication:
+This project uses a **hybrid model**:
+* **Open Engine:** Built on top of open-source backends (Ollama) and local vector store libraries.
+* **Proprietary UI & Optimization:** The Windows desktop application, custom web UI, and specific model optimizations are proprietary.
 
-User login system with password encryption.
+## Tech Stack
 
-Encryption key configuration is managed within the repository setup.
+* **Target OS:** Windows 10 / 11
+* **Target Hardware:** Consumer NVIDIA GPUs (Optimized for RTX 3050)
+* **LLM Engine:** Ollama / Local Runner
+* **Networking:** Cloudflare Tunnels
+* **Vector Storage:** Local Vector DB
+* **Security:** Encrypted authentication & local key management
 
-Dedicated admin dashboard to manage user access and settings.
+## Project Status
 
-Open Source Code: The entire system is customizable so you can adapt it to your needs.
+> Currently in active testing and debugging. Release binaries and documentation will be pushed as the Windows build stabilizes.
 
 <img width="782" height="849" alt="image" src="https://github.com/user-attachments/assets/15befd62-b225-4e63-9af6-6781656344aa" />
 
 
-Project Status
-Note: Source code files will be pushed to this repository as soon as the current debugging and testing phase is complete.
-
-Tech Stack
-LLM Engine: Ollama / Local Runner
-
-Networking/Tunneling: Cloudflare
-
-Storage & RAG: Local Vector Database for document memory
-
-Security: Password encryption for user authentication
-
-License
-Open Source project.
