@@ -70,5 +70,5 @@ Feature	What it does
 <div align="center">
   <h3>📜 License</h3>
   <p><strong>Synapse is proprietary software.</strong> The source code is not public.</p>
-  <p>📩 Licensing inquiries: [your contact]</p>
+  <p>📩 Licensing inquiries: []</p>
 </div>
