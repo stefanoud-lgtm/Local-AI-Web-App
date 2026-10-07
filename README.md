@@ -1,11 +1,13 @@
 <div align="center">
-🧠 Synapse
-Your private AI assistant — running entirely on your own PC
-Offline by default. Your data never leaves your machine.
-![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![Status](https://img.shields.io/badge/status-active%20development-orange?style=for-the-badge)
-![Privacy](https://img.shields.io/badge/privacy-local%20first-2ea44f?style=for-the-badge&logo=shield&logoColor=white)
-![GPU](https://img.shields.io/badge/GPU-RTX%203050%208GB-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
+  <h1>🧠 Synapse</h1>
+  <h3>Your private AI assistant — running entirely on your own PC</h3>
+  <p><em>Offline by default. Your data never leaves your machine.</em></p>
+  <p>
+    <img alt="Platform" src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white">
+    <img alt="Status" src="https://img.shields.io/badge/status-active%20development-orange?style=for-the-badge">
+    <img alt="Privacy" src="https://img.shields.io/badge/privacy-local%20first-2ea44f?style=for-the-badge">
+    <img alt="GPU" src="https://img.shields.io/badge/GPU-RTX%203050%208GB-76B900?style=for-the-badge&logo=nvidia&logoColor=white">
+  </p>
 </div>
 ---
 ✨ Why Synapse
@@ -66,7 +68,7 @@ Feature	What it does
 🦙 Ollama with at least one model (default: `qwen2.5:7b`)
 ---
 <div align="center">
-📜 License
-Synapse is proprietary software. The source code is not public.
-📩 Licensing inquiries: [your contact]
+  <h3>📜 License</h3>
+  <p><strong>Synapse is proprietary software.</strong> The source code is not public.</p>
+  <p>📩 Licensing inquiries: [your contact]</p>
 </div>
