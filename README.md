@@ -22,10 +22,9 @@
 
 <!-- Replace with your own images (suggested folder: docs/images/) -->
 <p align="center">
-  <img src="docs/images/hud.png" alt="Desktop HUD" width="48%">
-  <img src="docs/images/webapp.png" alt="Web app" width="48%">
+  <img src="docs/images/login.png" alt="Login screen" width="80%">
 </p>
-<p align="center"><i>Desktop HUD · Web app</i></p>
+<p align="center"><i>Web app — login screen</i></p>
 
 ---
 
@@ -44,7 +43,12 @@
 ## 🖥️ Interfaces
 
 ### ⚡ Desktop HUD
-A minimal, Dynamic Island–style bar that stays out of your way.
+A minimal, Dynamic Island–style bar that stays out of your way. It has two sizes:
+
+| Compact | Expanded |
+|:-:|:-:|
+| <img src="docs/images/hud-compact.png" alt="HUD compact" width="100%"> | <img src="docs/images/hud-expanded.png" alt="HUD expanded" width="100%"> |
+| Just the toolbar | Toolbar with the input field, ready for a question |
 
 | | |
 |---|---|
