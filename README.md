@@ -14,6 +14,8 @@
 ![LLM](https://img.shields.io/badge/LLM-Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white&labelColor=555)
 ![License](https://img.shields.io/badge/license-proprietary-8A2BE2?style=for-the-badge&labelColor=555)
 
+**English** · [Italiano](README.it.md)
+
 </div>
 
 ---
@@ -124,6 +126,11 @@ flowchart LR
 - [ ] 🌗 Light and dark themes
 - [ ] 🖥️ Multi-monitor support and more HUD settings
 - [ ] ⚡ Faster responses
+
+## 🕰️ Project history
+
+- **January–April 2026 — first version.** It didn't hold up: the foundations weren't good enough. Instead of patching it, I deleted it and started over.
+- **June 2026 — complete rewrite.** The current Synapse, developed continuously since then: 150+ hours so far, including a full-time month in July.
 
 ## 👤 Author
 
