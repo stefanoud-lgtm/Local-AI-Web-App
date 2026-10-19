@@ -22,10 +22,9 @@
 
 <!-- Sostituisci con le tue immagini (cartella consigliata: docs/images/) -->
 <p align="center">
-  <img src="docs/images/hud.png" alt="HUD desktop" width="48%">
-  <img src="docs/images/webapp.png" alt="Web app" width="48%">
+  <img src="docs/images/login.png" alt="Schermata di accesso" width="80%">
 </p>
-<p align="center"><i>HUD desktop · Web app</i></p>
+<p align="center"><i>Web app — schermata di accesso</i></p>
 
 ---
 
@@ -44,7 +43,12 @@
 ## 🖥️ Interfacce
 
 ### ⚡ HUD desktop
-Una barra minimale in stile Dynamic Island che non dà fastidio.
+Una barra minimale in stile Dynamic Island che non dà fastidio. Ha due dimensioni:
+
+| Compatto | Espanso |
+|:-:|:-:|
+| <img src="docs/images/hud-compact.png" alt="HUD compatto" width="100%"> | <img src="docs/images/hud-expanded.png" alt="HUD espanso" width="100%"> |
+| Solo la barra degli strumenti | Barra con il campo di testo, pronta per una domanda |
 
 | | |
 |---|---|
