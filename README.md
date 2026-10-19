@@ -1,74 +1,141 @@
 <div align="center">
-  <h1>🧠 Synapse</h1>
-  <h3>Your private AI assistant — running entirely on your own PC</h3>
-  <p><em>Offline by default. Your data never leaves your machine.</em></p>
-  <p>
-    <img alt="Platform" src="https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-0078D6?style=for-the-badge&logo=windows&logoColor=white">
-    <img alt="Status" src="https://img.shields.io/badge/status-active%20development-orange?style=for-the-badge">
-    <img alt="Privacy" src="https://img.shields.io/badge/privacy-local%20first-2ea44f?style=for-the-badge">
-    <img alt="GPU" src="https://img.shields.io/badge/GPU-RTX%203050%208GB-76B900?style=for-the-badge&logo=nvidia&logoColor=white">
-  </p>
+
+# 🧠 Synapse
+
+### Your private AI assistant — running entirely on your own PC
+
+*Offline by default. Your data never leaves your machine.*
+
+![Platform](https://img.shields.io/badge/platform-Windows_10_|_11-0078D6?style=for-the-badge&logo=windows&logoColor=white&labelColor=555)
+![Status](https://img.shields.io/badge/status-active_development-F07F2F?style=for-the-badge&labelColor=555)
+![Privacy](https://img.shields.io/badge/privacy-local_first-2EA44F?style=for-the-badge&labelColor=555)
+<br>
+![GPU](https://img.shields.io/badge/GPU-RTX_3050_8GB-76B900?style=for-the-badge&logo=nvidia&logoColor=white&labelColor=555)
+![LLM](https://img.shields.io/badge/LLM-Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white&labelColor=555)
+![License](https://img.shields.io/badge/license-proprietary-8A2BE2?style=for-the-badge&labelColor=555)
+
 </div>
+
 ---
-✨ Why Synapse
-	
-🔒	Private by design — a local LLM answers on your hardware. Internet is off unless you turn it on.
-💻	Runs on consumer hardware — built and tested on a single RTX 3050 with 8 GB of VRAM. No cloud, no subscription.
-🪟	Two interfaces, one assistant — a minimal desktop HUD for quick questions, a full web app for longer work.
+
+<!-- Replace with your own images (suggested folder: docs/images/) -->
+<p align="center">
+  <img src="docs/images/hud.png" alt="Desktop HUD" width="48%">
+  <img src="docs/images/webapp.png" alt="Web app" width="48%">
+</p>
+<p align="center"><i>Desktop HUD · Web app</i></p>
+
 ---
-🖥️ Interfaces
-⚡ Desktop HUD
+
+## ✨ What it is
+
+**Synapse** is a personal AI assistant that runs a large language model **locally on your PC**. No cloud, no subscription, no data sent anywhere: the internet stays off unless you explicitly turn it on.
+
+## 🎯 Why Synapse
+
+| | |
+|---|---|
+| 🔒 **Private by design** | A local LLM answers on your own hardware. Internet is off unless you enable it. |
+| 💻 **Runs on consumer hardware** | Built and tested on a single RTX 3050 with 8 GB of VRAM. |
+| 🪟 **Two interfaces, one assistant** | A minimal desktop HUD for quick questions, a full web app for longer work. |
+
+## 🖥️ Interfaces
+
+### ⚡ Desktop HUD
 A minimal, Dynamic Island–style bar that stays out of your way.
-⌨️ Opens and closes with a global shortcut — `Alt + Space`
-🫧 Glassmorphism design, click-through when idle
-🟢 Live status dot: ready · generating · unavailable
-💬 Remembers the conversation, with saved chat history
-🌐 Web App
-The full workspace — as a desktop window or in the browser.
-📁 Projects and conversation history with search
-🔐 Optional secure remote access via Cloudflare Tunnel, behind login
----
-🚀 Features
-Feature	What it does
-📚 Local document search	Ask questions about your PDFs, Word, OpenDocument and Excel files — answers cite their sources
-🧩 Long-term memory	Remembers useful facts across sessions, encrypted on your PC. Review or delete anytime
-🎙️ Offline voice	Speech-to-text (faster-whisper) and neural text-to-speech (Piper), no internet needed
-🧮 Built-in utilities	Calculator, unit conversion, date & time, reminders
-🗺️ Offline Italian geography	63,000+ places from GeoNames — details and distances, fully offline
-🔎 Mixed mode (optional)	Anonymous web search, only when you explicitly enable it
----
-🛡️ Security & Privacy
-✅ Offline by default — going online is always your choice
-✅ Backend bound to the local machine; remote access only through an authenticated tunnel
-✅ Salted password hashing + mandatory password change on first login
-✅ Role-based access — admin functions restricted to admins
-✅ Local data encrypted at rest (Windows DPAPI)
-✅ Optional firewall rule to block all outbound traffic
-✅ Documents and web results treated as data, never as instructions
----
-🆕 What's New — October 2026
-🎨 Brand-new minimal desktop HUD
-🧹 Agent mode removed — the assistant no longer runs commands or edits files, shrinking the attack surface
-🔐 Security hardening across authentication, access control and network exposure
-💬 Conversation memory and chat history in the HUD
-🔮 Coming Next
-> 🌟 **A completely redesigned web interface** — stay tuned.
-🌗 Light & dark themes
-🖥️ Multi-monitor support and more HUD settings
-⚡ Faster responses
----
-📸 Screenshots
-<div align="center">
-<img width="600" alt="Synapse login" src="https://github.com/user-attachments/assets/15befd62-b225-4e63-9af6-6781656344aa" />
-</div>
----
-⚙️ Requirements
-🪟 Windows 10 / 11
-🎮 NVIDIA GPU with 8 GB+ VRAM (tested on RTX 3050 8 GB)
-🦙 Ollama with at least one model (default: `qwen2.5:7b`)
----
-<div align="center">
-  <h3>📜 License</h3>
-  <p><strong>Synapse is proprietary software.</strong> The source code is not public.</p>
-  <p>📩 Information & collaborations: licensing@thexxaixx.uk</p>
-</div>
+
+| | |
+|---|---|
+| ⌨️ Global shortcut | Opens and closes with `Alt + Space` |
+| 🫧 Glassmorphism design | Click-through when idle |
+| 🟢 Live status dot | Ready · generating · unavailable |
+| 💬 Memory | Remembers the conversation, with saved chat history |
+
+### 🌐 Web App
+The full workspace, as a desktop window or in the browser.
+
+| | |
+|---|---|
+| 📁 Projects | Conversation history with search |
+| 🔐 Remote access (optional) | Secure access via Cloudflare Tunnel, behind login |
+
+## 🚀 Features
+
+| Feature | What it does |
+|---|---|
+| 📚 **Local document search** | Ask questions about your PDF, Word, OpenDocument and Excel files; answers cite their sources |
+| 🧩 **Long-term memory** | Remembers useful facts across sessions, encrypted on your PC. Review or delete anytime |
+| 🎙️ **Offline voice** | Speech-to-text (faster-whisper) and neural text-to-speech (Piper), no internet needed |
+| 🧮 **Built-in utilities** | Calculator, unit conversion, date and time, reminders |
+| 🗺️ **Offline Italian geography** | 63,000+ places from GeoNames, with details and distances, fully offline |
+| 🔎 **Mixed mode** *(optional)* | Anonymous web search, only when you explicitly enable it |
+
+## 🏗️ How it fits together
+
+```mermaid
+flowchart LR
+    HUD["⚡ Desktop HUD"] --> BE["Local backend<br>(this PC only)"]
+    WEB["🌐 Web App"] --> BE
+    REM["📱 Remote device"] -.->|"Cloudflare Tunnel<br>+ login (optional)"| WEB
+    BE --> LLM["🦙 Ollama<br>local LLM"]
+    BE --> DOCS["📚 Documents"]
+    BE --> MEM["🧩 Encrypted memory"]
+    BE --> VOICE["🎙️ Voice<br>STT · TTS"]
+    BE -.->|"only if enabled"| NET["🔎 Web search"]
+```
+
+## 🛡️ Security & privacy
+
+- ✅ **Offline by default**: going online is always your choice
+- ✅ **Local-only backend**: remote access only through an authenticated tunnel
+- ✅ **Salted password hashing**, with a mandatory password change on first login
+- ✅ **Role-based access**: admin functions restricted to admins
+- ✅ **Encryption at rest** for local data (Windows DPAPI)
+- ✅ **Optional firewall rule** to block all outbound traffic
+- ✅ **Prompt-injection aware**: documents and web results are treated as data, never as instructions
+
+## ⚙️ Requirements
+
+| Requirement | Details |
+|---|---|
+| 🪟 OS | Windows 10 / 11 |
+| 🎮 GPU | NVIDIA with 8 GB+ VRAM (tested on RTX 3050 8 GB) |
+| 🦙 Runtime | [Ollama](https://ollama.com) with at least one model (default: `qwen2.5:7b`) |
+
+## 🆕 What's new — October 2026
+
+- 🎨 Brand-new minimal desktop HUD
+- 🧹 **Agent mode removed**: the assistant no longer runs commands or edits files, which shrinks the attack surface
+- 🔐 Security hardening across authentication, access control and network exposure
+- 💬 Conversation memory and chat history in the HUD
+
+## 🗺️ Roadmap
+
+- [x] Local LLM via Ollama
+- [x] Local document search with source citations
+- [x] Encrypted long-term memory
+- [x] Offline voice (speech-to-text and text-to-speech)
+- [x] Built-in utilities and offline Italian geography
+- [x] Optional anonymous web search
+- [x] Secure remote access via Cloudflare Tunnel
+- [x] New minimal desktop HUD
+- [x] Security hardening and removal of agent mode
+- [ ] 🌟 Completely redesigned web interface
+- [ ] 🌗 Light and dark themes
+- [ ] 🖥️ Multi-monitor support and more HUD settings
+- [ ] ⚡ Faster responses
+
+## 👤 Author
+
+**Stefano**, 17-year-old maker from Italy.
+
+- GitHub: *(this profile)*
+- LinkedIn: *(coming soon)*
+
+## 📄 License
+
+© 2026 Stefano. **All rights reserved.**
+
+Synapse is proprietary software. The source code is not public. No part of this repository (text, images, documentation) may be copied, modified, redistributed or used commercially without written permission from the author.
+
+📩 Information and collaborations: [licensing@thexxaixx.uk](mailto:licensing@thexxaixx.uk)
